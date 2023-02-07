@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Open Sans", "Lucida Grande", tahoma, verdana, arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 70%;
+  margin: 20px auto;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h1 {
+  padding: 20px 0;
+}
+
+.scores {
+  align-items: self-start;
+}
+
+.scores .recent-score {
+  align-items: start;
+  padding: 20px;
+}
+
+.recent-score:first-of-type div {
+  gap: 20px;
+}
+
+.add-score h3 {
+  padding: 20px 0;
+}
+
+.recent-score:first-of-type div h3 {
+  padding: 20px 0;
+}
+
+.btn {
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+.score-table {
+  border: 1px solid;
+  width: 100%;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.score-table li {
+  padding: 10px;
+  background-color: #f6f6f6;
+  border: 0.5px solid;
+}
+
+.add-score {
+  align-items: start;
+  padding: 20px;
+}
+
+.add-score .add-new {
+  align-items: end;
+}
+
+.add-new input {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 0.2px solid;
+}
+
+.add-new button {
+  margin-right: 10px;
+}
