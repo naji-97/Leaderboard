@@ -1,0 +1,14 @@
+{
+ "ci": {
+   "collect": {
+     "numberOfRuns": 2
+   },
+   "assert": {
+     "assertions": {
+       "categories:performance": {
+         "minScore": 0.9
+       }
+     }
+   }
+ }
+}
