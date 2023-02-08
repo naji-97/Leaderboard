@@ -41,14 +41,6 @@ class ScoreBoard {
     this.scores.push({ name, score });
     localStorage.setItem('scores', JSON.stringify(this.scores));
   }
-
-//   addNewScore() {
-//     const name = document.getElementById('name');
-//     const score = document.getElementById('score');
-//     this.scores.push(`${name.value} : ${score.value}`);
-//     name.value = '';
-//     score.value = '';
-//   }
 }
 
 export default ScoreBoard;

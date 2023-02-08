@@ -19,11 +19,9 @@ const formAction = () => {
 };
 const refresh = document.querySelector('.refresh');
 const refreshAction = () => {
-  // console.log('hhhhhhhhhhhh');
   refresh.addEventListener('click', () => {
     window.location.reload();
     scoreBoard.displayScor();
-  // console.log('hhhhhhhh');
   });
 };
 
