@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Leaderboard</title>
+</head>
+<body>
+ <main>
+  <h1>Leaderboard</h1>
+  <section class="scores flex">
+   <div class="recent-score flex-col">
+    <div class="flex">
+    <h3>Recent scores</h3>
+    <button class="refresh btn">Refresh</button>
+   </div>
+    <ul class="score-table">
+    </ul>
+
+   </div>
+   <div class="add-score  flex-col">
+    
+    <h3> Add your score</h3>
+    <form  id="form"  required class="add-new flex-col">
+     <input id="name" required type="text" placeholder="Your name">
+
+     <input id="score" type="text" placeholder="Your score">
+      <button type="submit" class="btn">Submit</button>
+    </form>
+   </div>
+   
+  </section>
+ </main>
+ 
+</body>
+</html>
