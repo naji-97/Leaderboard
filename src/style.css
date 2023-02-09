@@ -38,11 +38,10 @@ button {
 main {
   width: 70%;
   margin: 20px auto;
-  background: #ffffff;
-   padding: 10px;
-   background: linear-gradient(to bottom, #6262b9, #03a9f4), linear-gradient(to right, #000428, #004e92);
+  padding: 10px;
+  background: linear-gradient(to bottom, #6262b9, #03a9f4), linear-gradient(to right, #000428, #004e92);
   border-radius: 10px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
 }
 
 h1 {
@@ -54,6 +53,7 @@ h1 {
 
 .scores {
   align-items: self-start;
+  gap: 200px;
 }
 
 .scores .recent-score {
@@ -74,10 +74,8 @@ h1 {
 }
 
 .btn {
-  padding: 5px;
   border: 1px solid;
-  border-radius: 5px;
-  background-color: #000428;
+  background-color: #2196f375;
   border-radius: 12px;
   border-width: 0;
   box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
@@ -91,15 +89,36 @@ h1 {
   transition: all 200ms;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #2196f3;
+}
+
+.succes-msg {
+  background-color: #4caf50;
+  border-radius: 50px;
+  box-shadow: rgb(25 25 25 / 4%) 0 0 1px 0, rgb(0 0 0 / 10%) 0 3px 4px 0;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  height: 30px;
+  transition: all 200ms;
+  width: 600px;
+  display: none;
+  padding: 3px 10px;
+  margin: 10px auto;
+  text-align: center;
+}
+
 .score-table {
   width: 100%;
   display: none;
   margin: 20px auto;
-  background: #ffffff;
+  background: #fff;
   background: linear-gradient(to bottom, #6262b9, #1289bb), linear-gradient(to right, #000428, #004e92);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+  box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0 30px 60px -30px, rgb(10 37 64 / 35%) 0 -2px 6px 0 inset;
 }
 
 .show {
@@ -108,8 +127,16 @@ h1 {
 
 .score-table li {
   padding: 10px;
-  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px, rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+  box-shadow: rgb(50 50 93 / 25%) 0 50px 100px -20px, rgb(0 0 0 / 30%) 0 30px 60px -30px, rgb(10 37 64 / 35%) 0 -2px 6px 0 inset;
+}
 
+.score-table li:nth-child(-n + 3) {
+  color: #fff;
+}
+
+.score-table li:nth-last-child(-n + 2) {
+  border: 0.2px solid red;
+  color: #4e3f3ae0;
 }
 
 .add-score {
@@ -125,8 +152,13 @@ h1 {
   width: 200px;
   margin: 10px;
   padding: 10px;
-  border: 0.2px solid;
+  border: none;
+  background: #004e9257;
   border-radius: 12px;
+}
+
+.add-new input::placeholder {
+  color: #fff;
 }
 
 .add-new button {
