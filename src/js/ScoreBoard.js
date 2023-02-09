@@ -21,9 +21,11 @@ class ScoreBoard {
     this.scores = await this.fetchApi();
     if (this.scores.length !== 0) {
       scoreTable.classList.add('show');
-      this.scores.forEach((ele) => {
+      this.scores.sort((a, b) => b.score - a.score).forEach((ele) => {
         const li = document.createElement('li');
-        li.textContent = `${ele.name} : ${ele.score}`;
+       const capitalName = ele.name.charAt(0).toUpperCase()+ ele.name.slice(1)
+       
+        li.textContent = `${capitalName} : ${ele.score}`;
         scoreTable.appendChild(li);
       });
     }
