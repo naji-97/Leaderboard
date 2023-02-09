@@ -1,7 +1,7 @@
 class ScoreBoard {
   constructor() {
     this.scores = JSON.stringify(localStorage.getItem('scores')) || [];
-    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/naji/scores/';
+    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/N3aAjkfs9/scores/';
   }
 
   fetchApi = async () => {
@@ -19,11 +19,14 @@ class ScoreBoard {
     const scoreTable = document.querySelector('.score-table');
     scoreTable.innerHTML = '';
     this.scores = await this.fetchApi();
+
     if (this.scores.length !== 0) {
       scoreTable.classList.add('show');
-      this.scores.forEach((ele) => {
+      this.scores.sort((a, b) => b.score - a.score).forEach((ele) => {
         const li = document.createElement('li');
-        li.textContent = `${ele.name} : ${ele.score}`;
+        const capitalName = ele.name.charAt(0).toUpperCase() + ele.name.slice(1);
+
+        li.textContent = `${capitalName}: ${ele.score}`;
         scoreTable.appendChild(li);
       });
     }
@@ -39,6 +42,12 @@ class ScoreBoard {
       },
     });
     this.scores.push({ name, score });
+    const succeMsg = document.querySelector('.succes-msg');
+    succeMsg.classList.add('show');
+    setTimeout(() => {
+      succeMsg.textContent = '';
+      succeMsg.classList.remove('show');
+    }, 3000);
     localStorage.setItem('scores', JSON.stringify(this.scores));
   }
 }
