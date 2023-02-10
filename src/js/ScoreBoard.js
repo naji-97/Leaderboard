@@ -1,7 +1,7 @@
 class ScoreBoard {
   constructor() {
     this.scores = JSON.stringify(localStorage.getItem('scores')) || [];
-    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/N3aAjkfs9/scores/';
+    this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/N2D2331AZ/scores/';
   }
 
   fetchApi = async () => {

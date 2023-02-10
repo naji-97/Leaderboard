@@ -134,7 +134,7 @@ h1 {
   color: #fff;
 }
 
-.score-table li:nth-last-child(-n + 2) {
+.score-table li:nth-last-child(-n + 1) {
   border: 0.2px solid red;
   color: #4e3f3ae0;
 }
