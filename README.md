@@ -15,7 +15,10 @@
   - [Acknowledgments](#acknowledgments)
   - [License](#license)
 # Leaderboard
+> This is the project using webpack.
 In this project. I built a leaderboard which is a website that displays scores submitted by different players. It also allow users to submit their score. All data is preserved to the external Leaderboard API service.
+
+<img src="./src/img/Screenshot%202023-02-10%20140419.png" alt="leaderboard"/>
 
 ## Built With
 
